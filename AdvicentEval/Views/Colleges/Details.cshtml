@@ -1,0 +1,50 @@
+﻿@model AdvicentEval.Models.College
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>College</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CollegeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollegeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InStateTuition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InStateTuition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OutofStateTuition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OutofStateTuition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomAndBoard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomAndBoard)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

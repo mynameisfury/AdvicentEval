@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AdvicentEval.Models.College>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>
+    @ViewBag.ErrorMessage
+</h1>
+@ViewBag.ErrorMessage
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CollegeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InStateTuition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutofStateTuition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomAndBoard)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CollegeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InStateTuition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OutofStateTuition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomAndBoard)
+            </td>
+
+        </tr>
+    }
+    </table>

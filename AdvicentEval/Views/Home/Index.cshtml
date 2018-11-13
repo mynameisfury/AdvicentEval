@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model AdvicentEval.Models.College
+
+<div class="jumbotron">
+    <h1>College Cost Calculator</h1>
+    <p class="lead"></p>
+</div>
+
+@{string collegeName = "college";};
+<div class="row">
+    <p>
+        Search for your college: @Html.Editor(collegeName)
+    </p>
+    <p>
+        @Html.ActionLink("submit", "searchColleges", "Colleges", new { selectedCollege = collegeName }, null)
+    </p>
+
+</div>
